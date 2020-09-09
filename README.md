@@ -7,7 +7,7 @@ Example APP
 ### Environment variables
 
 --- | --- | ---
-*Variable* | Description | Default
+Variable | Description | Default
 REDIS_HOST | Redis instance address | redis 
 
 ## Local
