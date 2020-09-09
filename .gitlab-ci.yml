@@ -11,7 +11,7 @@ stages:
 
 before_script:
   - env
-  - docker login -u _json_key -p $GOOGLE_CREDS https://gcr.io
+  - docker login -u _json_key -p $GOOGLE_CREDS gcr.io
 
 build_ref:
   stage: build
