@@ -16,5 +16,5 @@ before_script:
 build_ref:
   stage: build
   script:
-    - docker build -t ${REGISTRY_URL}/${IMAGE_NAME}:${CI_BUILD_REF}
+    - docker build -t ${REGISTRY_URL}/${IMAGE_NAME}:${CI_BUILD_REF} .
     - docker push ${REGISTRY_URL}/${IMAGE_NAME}:${CI_BUILD_REF}
