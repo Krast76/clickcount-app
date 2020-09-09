@@ -10,8 +10,8 @@ stages:
   - build
 
 before_script:
-  - env
-  - docker login -u _json_key -p $GOOGLE_CREDS gcr.io
+  - echo $GOOGLE_CREDS > /tmp/$CI_PIPELINE_ID.json
+  - cat /tmp/$CI_PIPELINE_ID.json | docker login -u _json_key --password-stdin https://eu.gcr.io
 
 build_ref:
   stage: build
