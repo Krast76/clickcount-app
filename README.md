@@ -1,3 +1,22 @@
 # Click Count application
 
-[![Build Status](https://travis-ci.org/xebia-france/click-count.svg)](https://travis-ci.org/xebia-france/click-count)
+Example APP
+
+## Image
+
+### Environment variables
+
+--- | --- | ---
+*Variable* | Description | Default
+REDIS_HOST | Redis instance address | redis 
+
+## Local
+
+### Requirements
+
+* Docker
+* docker-compose
+
+```bash
+docker-compose up -d
+```
