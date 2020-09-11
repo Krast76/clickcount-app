@@ -18,3 +18,20 @@ build_latest:
   script:
     - docker build -t $REGISTRY_URL/$IMAGE_NAME:latest .
     - docker push $REGISTRY_URL/$IMAGE_NAME:latest
+
+build_tags:
+  stage: build
+  script:
+    - docker build -t $REGISTRY_URL/$IMAGE_NAME:$CI_COMMIT_TAG .
+    - docker push $REGISTRY_URL/$IMAGE_NAME:$CI_COMMIT_TAG
+  only: 
+    - tags
+
+build_refs:
+  stage: build
+  script:
+    - docker build -t $REGISTRY_URL/$IMAGE_NAME:$CI_COMMIT_SHORT_SHA .
+    - docker push $REGISTRY_URL/$IMAGE_NAME:$CI_COMMIT_SHORT_SHA
+  only: 
+    - master
+  
