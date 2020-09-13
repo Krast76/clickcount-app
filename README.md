@@ -7,11 +7,11 @@ Example APP deployed on [Google Cloud Run](https://cloud.google.com/run)
 ### Workflow
 
 * All commits on the project will create a new latest image
-* When a tag is set, an image is created with the git tag as image's tag, and the staging Cloud RUN service is updated with this image
-* When the staging code is ok, code should be merge in the master branch. When a commit comes to master a new image is built with the COMMIT SHA as image's tag and the prod Cloud RUN service is updated with this image
+* When a tag is set, an image is created with the git tag as the image's tag, and the staging Cloud RUN service is updated with this image
+* When the staging code is ok, code should be merged in the master branch. When a commit comes to master a new image is built with the COMMIT SHA as the image's tag and the prod Cloud RUN service is updated with this image
 ### Infra Requirements
 
-All infra required by the APP is created by terraform. To use it follow instructions on [clickcount-infra](https://github.com/Krast76/clickcount-infra)
+All infra required by the APP is created by terraform. To use it follows instructions on [clickcount-infra](https://github.com/Krast76/clickcount-infra)
 
 ### GCP Requirement
 
@@ -32,6 +32,8 @@ Few steps are present :
 * Deploy : Deploy built images on Google Cloud Run
 
 Test step was avoid because the project doesn't contains any test. :(
+
+The project use gitlab.com with a gitlab-runner.
 
 ### Variables
 
