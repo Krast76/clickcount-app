@@ -81,7 +81,7 @@ docker-compose up -d
 
 ![](./img/clickcount-deploy-staging.png)
 
-### Build and deploy to prod
+### Prod
 
 #### Pipeline example
 
