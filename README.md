@@ -65,3 +65,26 @@ REDIS_HOST | Redis instance address | redis
 ```bash
 docker-compose up -d
 ```
+
+
+## Screenshots
+
+### Staging
+
+#### Pipeline example
+
+![](./img/clickcount-staging.png)
+
+#### Deploy step output
+
+![](./img/clickcount-deploy-staging.png)
+
+### Build and deploy to prod
+
+#### Pipeline example
+
+![](./img/clickcount-prod.png)
+
+#### Deploy step output
+
+![](./img/clickcount-deploy-prod.png)
