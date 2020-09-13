@@ -39,7 +39,6 @@ build_refs:
 deploy_staging:
   stage: deploy
   before_script:
-    - gcloud --quiet components update
     - echo $GOOGLE_CREDENTIALS > /tmp/$CI_PIPELINE_ID.json
     - gcloud auth activate-service-account --key-file /tmp/$CI_PIPELINE_ID.json
   image: gcr.io/google.com/cloudsdktool/cloud-sdk:309.0.0
@@ -51,7 +50,6 @@ deploy_staging:
 deploy_prod:
   stage: deploy
   before_script:
-    - gcloud --quiet components update
     - echo $GOOGLE_CREDENTIALS > /tmp/$CI_PIPELINE_ID.json
     - gcloud auth activate-service-account --key-file /tmp/$CI_PIPELINE_ID.json
   image: gcr.io/google.com/cloudsdktool/cloud-sdk:309.0.0
